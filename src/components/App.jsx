@@ -6,7 +6,7 @@ import SearchBox from './SearchBox/SearchBox';
 function App() {
   const [allContacts, setAllContacts] = useState(() => {
     const savedContacts = JSON.parse(localStorage.getItem('contacts'));
-    return savedContacts;
+    return savedContacts || [];
   });
 
   const [searchTerm, setSearchTerm] = useState('');
