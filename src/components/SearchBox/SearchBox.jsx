@@ -1,4 +1,5 @@
 import { useId } from 'react';
+import css from './SearchBox.module.css';
 
 function SearchBox({ value, onChange }) {
   const searchId = useId();
@@ -10,6 +11,7 @@ function SearchBox({ value, onChange }) {
 
   return (
     <input
+      className={css.inputSearch}
       type="text"
       placeholder="Search by name"
       value={value}
